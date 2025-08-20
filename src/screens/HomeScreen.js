@@ -5,9 +5,12 @@ import Google from "../image/Google.png";
 
 const windowWidth = Dimensions.get('window').width;
 
-//14C871 Cor do verde de fundo
-
 export default function HomeScreen({ navigation }) {
+
+    const navegar = () => {
+        navigation.navigate('Login');
+    }
+
     return (
         <View style={styles.container}>
             <Image
@@ -19,14 +22,14 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.text}>Como deseja acessar?</Text>
 
             <TouchableOpacity style={styles.button1}>
-                <Image
-                source={Google} 
-                style={styles.image2}
-                />
+                    <Image
+                        source={Google}
+                        style={styles.image2}
+                    />
                 <Text style={styles.textbutton1}>Logar com o Google</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button2}>
+            <TouchableOpacity style={styles.button2} onPress={navegar}>
                 <Text style={styles.textbutton2}>Outras opções</Text>
             </TouchableOpacity>
 
@@ -48,9 +51,20 @@ const styles = StyleSheet.create({
         height: 265,
     },
     image2: {
-        position:'absolute',
-        width: 40,
-        height: 40,
+        position: 'absolute',
+        width: 35,
+        height: 35,
+        left: 15,
+        top: 6.5,
+        backgroundColor: '#fbfbfb',
+        borderRadius: 5,
+        borderColor: '#fbfbfb',
+        borderStyle: 'solid',
+        borderWidth: 2,
+    },
+    fundo: {
+        backgroundColor: 'FFFFFF',
+        borderRadius: 8,
     },
     title: {
         color: '#58656f',
