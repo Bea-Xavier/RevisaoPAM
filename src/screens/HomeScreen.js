@@ -1,5 +1,4 @@
-import { View, Text, Pressable, TouchableOpacity, StyleSheet, Dimensions, Image, Button } from 'react-native';
-//import AsyncStorage from '@react-native-async-storage/async-storage';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Image } from 'react-native';
 import CasualDog from "../image/casual_dog.png";
 import Google from "../image/Google.png";
 
